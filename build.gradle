@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+group 'myStore.automation'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.12
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.seleniumhq.selenium:selenium-java:3.14.0"
+    compile "org.testng:testng:6.14.3"
+    compile "log4j:log4j:1.2.17"
+    compile "org.assertj:assertj-core:3.11.1"
+    compile "io.github.bonigarcia:webdrivermanager:3.6.0"
+    compile 'com.google.guava:guava:27.0.1-jre'
+    compile 'com.squareup.okhttp3:okhttp:3.14.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.14.1'
+    compile 'com.squareup.retrofit2:retrofit:2.5.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.5.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.5.0'
+
+}
+
+test {
+
+    useTestNG() {
+        suites 'src/test/java/SeleniumUI.tests/suite.xml'
+        outputDirectory = file('./report')
+        systemProperties(System.getProperties())
+    }
+}
+
+

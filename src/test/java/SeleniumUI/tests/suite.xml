@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MyStore">
+  <test name="Log in test">
+    <classes>
+      <class name="SeleniumUI.tests.user_login.LoginTest"/>
+    </classes>
+  </test>
+  <test name="Invalid Log in test">
+    <classes>
+      <class name="SeleniumUI.tests.user_login.InvalidLoginTest"/>
+    </classes>
+  </test>
+  <test name="Registration">
+    <classes>
+      <class name="SeleniumUI.tests.user_registration.SuccessfulRegistrationTest"/>
+    </classes>
+  </test>
+  <test name="Unsuccessful registration">
+    <classes>
+      <class name="SeleniumUI.tests.user_registration.UnsuccessfulRegistrationTest"/>
+    </classes>
+  </test>
+  <test name="Searching">
+    <classes>
+      <class name="SeleniumUI.tests.user_search.SearchTest"/>
+    </classes>
+  </test>
+
+</suite>
